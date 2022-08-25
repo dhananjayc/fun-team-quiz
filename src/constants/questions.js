@@ -23,6 +23,8 @@ const demoQues =  [{
   ]
 }];
 
+
+/** Actual Questions are below */
 const compQuests = [
   {
     "category": "Science: Computers",

@@ -1,21 +1,21 @@
 const PLAYERS = [
   {
-    name: "Team A",
+    name: "Team 1",
     score: 0,
     id: 1
   },
   {
-    name: "Team B",
+    name: "Team 2",
     score: 0,
     id: 2
   },
   {
-    name: "Team C",
+    name: "Team 3",
     score: 0,
     id: 3
   },
   {
-    name: "Team D",
+    name: "Team 4",
     score: 0,
     id: 4
   }

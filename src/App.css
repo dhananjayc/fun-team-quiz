@@ -251,13 +251,17 @@ li.selected:not(correct) {
 
 .header .stats,
 .header .stopwatch {
-  width: 170px;
+  width: 172px;
 }
 
 .stats {
   margin-top: 0;
   font-weight: normal;
 }
+
+  .stats tbody {
+    float: left;
+  }
 
   .stats td:first-child {
     text-align: right;

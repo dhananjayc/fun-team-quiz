@@ -27,7 +27,7 @@ h2 {
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 16px;
 }
 
@@ -48,10 +48,11 @@ h2 {
 .app-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  justify-content: flex-start;
+  /* height: 100vh; */
   min-width: 350px;
   max-width: 500px;
+  margin: 65px 0px;
 }
 
 .optionItem {
@@ -222,14 +223,16 @@ li.selected:not(correct) {
 
 .scoreboard {
   background: transparent;
-  /* width: 700px; */
-  margin: 70px auto;
+  width: 350px;
+  /* margin: 70px auto; */
   /* box-shadow: 0 4px 0px #333; */
+  margin-top: 70px;
+  height: 100%;
   border-radius: 15px;
   border: 1px solid #333;
-  position: absolute;
+  /* position: absolute;
   right: 5%;
-  top: 0;
+  top: 0; */
 }
 
 .header {
@@ -251,17 +254,13 @@ li.selected:not(correct) {
 
 .header .stats,
 .header .stopwatch {
-  width: 172px;
+  width: 170px;
 }
 
 .stats {
   margin-top: 0;
   font-weight: normal;
 }
-
-  .stats tbody {
-    float: left;
-  }
 
   .stats td:first-child {
     text-align: right;
@@ -442,3 +441,17 @@ li.selected:not(correct) {
     color: #fafafa;
     cursor: pointer;
   }
+
+  .iframe-buzz-app{
+    background-color: white;
+    border: 0px;
+    height: calc(100vh - 140px);
+    margin-top: 70px;
+    width: 700px;
+  }
+
+  @media only screen and (max-width: 800px) {
+  .app-container {
+    display: none;
+  }
+}

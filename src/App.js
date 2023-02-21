@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <iframe src="https://www.cosmobuzz.net/#/host" title='Buzz' className='iframe-buzz-app' />
       <div className="app-container">
         {component}
       </div>

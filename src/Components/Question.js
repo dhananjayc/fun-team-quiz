@@ -63,7 +63,7 @@ function Question() {
     }
     let answers = [...question.incorrect_answers];
     answers.splice(getRandomInt(question.incorrect_answers.length), 0, question.correct_answer);
-    setOptions(answers);
+    setOptions(!question?.correct_answer?.length ? [] : answers)
     setShowTimer(true);
     setSeconds(timerVal);
   }, [question])
@@ -120,7 +120,7 @@ function Question() {
   return (
     <div>
       <p>Question {questionIndex + 1}</p>
-      <h1>{question.question}</h1>
+      <h1 dangerouslySetInnerHTML={{ __html: question.question }}></h1>
       <ul>
         {options.map((option, i) => (
           <div key={`option_key_${i}`} style={{display: 'inline'}}>

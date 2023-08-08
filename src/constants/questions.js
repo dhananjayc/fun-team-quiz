@@ -1,15 +1,43 @@
 
 const demoQues =  [{
   "category": "Demo",
-  "type": "multiple",
+  "type": "image",
   "difficulty": "medium",
-  "question": "Choose correct option ?",
+  "question": `Verify Image correctly ? <br /> <br />
+    <img src='https://www.gstatic.com/webp/gallery/1.jpg'>`,
   "correct_answer": "Correct option",
   "incorrect_answers": [
     "Incorrect option",
-    "Right option",
-    "True option"
   ]
+},{
+  "category": "Demo",
+  "type": "video",
+  "difficulty": "medium",
+  "question": `Verify Video correctly ? <br /> <br /> <video width="550" controls>
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+  </video>`,
+  "correct_answer": "Yes",
+  "incorrect_answers": [
+    "No",
+  ]
+},{
+  "category": "Demo",
+  "type": "image",
+  "difficulty": "medium",
+  "question": `Find the differences from image - <br /> <br />
+    <img width="550" src='../assets/findthedifference-demo-img.jpg'>`,
+  "correct_answer": null,
+  "incorrect_answers": []
+},{
+  "category": "Demo",
+  "type": "audio",
+  "difficulty": "medium",
+  "question": `Listen the audio and Guess? - <br /> <br />
+    <audio controls>
+      <source src="../assets/demo-audio.mp3" type="audio/mpeg">
+    </audio>`,
+  "correct_answer": null,
+  "incorrect_answers": []
 },{
   "category": "Demo",
   "type": "multiple",

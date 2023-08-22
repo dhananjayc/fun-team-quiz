@@ -4,6 +4,7 @@ import Settings from './Components/Settings'
 import Question from './Components/Question'
 import FinalScreen from './Components/FinalScreen'
 import ScoreBoard from './Components/ScoreBoard'
+import BuzzHost from './Components/BuzzHost'
 
 import './App.css'
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <BuzzHost />
       <div className="app-container">
         {component}
       </div>

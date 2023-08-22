@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import FetchButton from './FetchButton'
+import { useToggle }  from '../hooks/customHooks';
 
 function Settings() {
   const [options, setOptions] = useState(null)
@@ -14,6 +15,10 @@ function Settings() {
     (state) => state.options.question_difficulty
   )
   const questionType = useSelector((state) => state.options.question_type)
+
+  const buzzAppHost = useSelector((state) => state.options.buzz_application)
+
+  const [toggle, setToggle] = useToggle(!buzzAppHost?.length)
   // const questionAmount = useSelector(
   //   (state) => state.options.amount_of_questions
   // )
@@ -61,17 +66,37 @@ function Settings() {
     })
   }
 
-  // const handleAmountChange = (event) => {
-  //   dispatch({
-  //     type: 'CHANGE_AMOUNT',
-  //     amount_of_questions: event.target.value,
-  //   })
-  // }
+  const handleBuzzAppChange = (event) => {
+    dispatch({
+      type: 'CHANGE_BUZZ_APPLICATION',
+      buzz_application: event.target.value,
+    });
+    setToggle();
+  }
 
   if (!loading) {
     return (
       <div>
         <h1>Quiz App</h1>
+        <div>
+          <h2>Select Buzz App:
+            <strong className="counter-action" onClick={setToggle}>{buzzAppHost}</strong>
+          </h2>
+            {toggle &&
+            <select value={buzzAppHost} onChange={handleBuzzAppChange}>
+              <option value="Local" key="type-0">
+                Local
+              </option>
+              <option value="Server" key="type-1">
+                Server
+              </option>
+              <option value="Future" key="type-2">
+                In Future : Paste URL here
+              </option>
+            </select>
+            }
+        </div>
+
         <div>
           <h2>Select Category:</h2>
           <select value={questionCategory} onChange={handleCategoryChange}>
@@ -86,7 +111,7 @@ function Settings() {
           </select>
         </div>
 
-        <div>
+        <div style={{display:'none'}}>
           <h2>Select Difficulty:</h2>
           <select value={questionDifficulty} onChange={handleDifficultyChange}>
             <option value="" key="difficulty-0">

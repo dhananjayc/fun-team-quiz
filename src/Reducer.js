@@ -3,6 +3,7 @@ const initState = {
     loading: false,
     question_category: ``,
     question_difficulty: ``,
+    buzz_application: ``,
     question_type: ``,
     amount_of_questions: 10,
   },
@@ -37,6 +38,15 @@ const Reducer = (state = initState, action) => {
         options: {
           ...state.options,
           question_difficulty: action.question_difficulty,
+        },
+      }
+      
+    case 'CHANGE_BUZZ_APPLICATION':
+      return {
+        ...state,
+        options: {
+          ...state.options,
+          buzz_application: action.buzz_application,
         },
       }
 

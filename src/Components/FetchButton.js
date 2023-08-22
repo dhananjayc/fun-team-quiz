@@ -59,6 +59,6 @@ function FetchButton(props) {
     setLoading(false);
   }
 
-  return <button onClick={handleQuery}> {props.text} </button>
+  return <button className="action btn" onClick={handleQuery}> {props.text} </button>
 }
 export default FetchButton

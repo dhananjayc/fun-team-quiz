@@ -382,6 +382,7 @@ li.selected:not(correct) {
     display: flex;
   }
 
+  .action,
   .counter-action {
     border: none;
     font-weight: bold;
@@ -397,11 +398,13 @@ li.selected:not(correct) {
     flex: 1;
   }
 
+  .action.btn,
   .counter-action.increment {
     background: #66BBFF;
     margin-right: 5px;
   }
 
+  .action.btn:hover,
   .counter-action.increment:hover {
     background: #549d59;
     cursor: pointer;
@@ -425,7 +428,16 @@ li.selected:not(correct) {
     padding: 5px 25px;
     font-size: 2em;
   }
-
+  /* Dc Buzzer app */ 
+  .iframe-dc-buzz-app {
+    background-color: white;
+    border: 0px;
+    height: calc(100vh - 140px);
+    margin-top: 70px;
+    left: 10px;
+    position: absolute;
+    width: 30%;
+  }
 
 .add-player-form form {
   display: flex;

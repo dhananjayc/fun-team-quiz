@@ -3,7 +3,9 @@ import {
   useSelector,
   useDispatch
 } from 'react-redux';
-import { demoQues, sportQues, compQuests, oddManOutQues } from '../constants/questions';
+import {
+  demoQues, round2Ques, round1Ques, round3Ques, round4Ques
+} from '../constants/questions';
 
 function FetchButton(props) {
   const questionCategory = useSelector(
@@ -36,12 +38,14 @@ function FetchButton(props) {
 
   const handleQuery = async () => {
     setLoading(true);
-    if (parseInt(questionCategory, 10) === 2) {
-      setQuestions(sportQues);
-    } else if (parseInt(questionCategory, 10) === 3) {
-      setQuestions(compQuests);
+    if (parseInt(questionCategory, 10) === 3) {
+      setQuestions(round2Ques);
+    } else if (parseInt(questionCategory, 10) === 2) {
+      setQuestions(round1Ques);
     }  else if (parseInt(questionCategory, 10) === 4) {
-      setQuestions(oddManOutQues);
+      setQuestions(round3Ques);
+    } else if (parseInt(questionCategory, 10) === 5) {
+      setQuestions(round4Ques);
     } else {
       setQuestions(demoQues);
     }

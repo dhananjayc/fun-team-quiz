@@ -23,7 +23,17 @@ function Question() {
     if (seconds > 1) {
       setSeconds(seconds - 1);
     } else {
-      setSeconds('Sorry! Time up!!');
+      const dateObject = new Date();
+      // current hours
+      const hours = dateObject.getHours();
+      // current minutes
+      const minutes = dateObject.getMinutes();
+      // current seconds
+      const seconds = dateObject.getSeconds();
+      const milliseconds = dateObject.getMilliseconds();
+      // Actual Time to display on board
+      const time = `${hours}:${minutes}:${seconds}:${milliseconds}`
+      setSeconds(`Sorry! Time up!! Time Stamp : ${time}`);
       setShowTimer(false);
     }
   };

@@ -51,453 +51,953 @@ const demoQues =  [{
   ]
 }];
 
+/** Next Round block*/
+const nextRound = (info) => {
+  return {
+    "category":"next",
+    "type":"image",
+    "difficulty":"easy",
+    "question": info,
+    "correct_answer": null,
+    "incorrect_answers": []
+  };
+}
 
 /** Actual Questions are below */
-const compQuests = [
+// Technical
+const round1Ques = [
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "In computing terms, typically what does CLI stand for?",
-    "correct_answer": "Command Line Interface",
+    "question": "Which of these packages contains the exception Stack Overflow in Java?",
+    "correct_answer": "java.lang",
     "incorrect_answers": [
-      "Common Language Input",
-      "Control Line Interface",
-      "Common Language Interface"
+      "java.system",
+      "java.io",
+      "java.util"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "What do we call a network whose elements may be separated by some distance? It usually involves two or more small networks and dedicated high-speed telephone lines. ",
-    "correct_answer": "WAN (Wide Area Network) ",
+    "question": "Which exception is thrown when java is out of memory?",
+    "correct_answer": "MemoryFullException",
     "incorrect_answers": [
-      "URL (Universal Resource Locator) ",
-      "LAN (Local Area Network) ",
-      "World Wide Web ", 
+      "MemoryError",
+      "OutOfMemoryError",
+      "MemoryOutOfBoundsException"
+    ]
+  },  {
+    "category": "Programming",
+    "type": "image",
+    "difficulty": "medium",
+    "question": `What will be the output of the following Java program?
+      <img width="400" src='../assets/round/Prog_Q1.jpg'>`,
+    "correct_answer": "1 2 5 8",
+    "incorrect_answers": [
+      "2 1 8 5",
+      "1 5 8 2",
+      "2 8 5 1"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "Which is not a feature of Object-Oriented Programming in general definitions?",
-    "correct_answer": "Duplicate/Redundant data",
+    "question": "Select the command which is used to compare the contents of a table with expected values.",
+    "correct_answer": "verifyTable",
     "incorrect_answers": [
-      "Efficient Code",
-      "Code reusability",
-      "Modularity" 
+      "verifyTables",
+      "verifyTableData",
+      "verifyTableCell"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "Which feature of OOP indicates code reusability?",
-    "correct_answer": "Inheritance",
+    "question": "Which process will be used in JavaScript to find an element?",
+    "correct_answer": "By DOM query",
     "incorrect_answers": [
-      "Abstraction",
-      "Polymorphism",
-      "Encapsulation"
+      "BY CSS sector",
+      "BY XPath query",
+      "All of these"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "The sampling rate, (how many samples per second are stored) for a CD is?",
-    "correct_answer": "44.1 kHz",
+    "question": " What is the basic difference between JavaScript and Java?",
+    "correct_answer": "Functions are values, and there is no hard distinction between methods and fields",
     "incorrect_answers": [
-      "48.4 kHz ",
-      "22,050 Hz ",
-      "48 kHz "
+      "Functions are considered as fields",
+      "Variables are specific",
+      "There is no difference"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "Which is not an application layer protocol?",
-    "correct_answer": "TCP",
+    "question": "Which is a possible way of finding all the img elements in the document?",
+    "correct_answer": "document.images[]",
     "incorrect_answers": [
-      'HTTP', 
-      'SMTP', 
-      'FTP', 
+      'document(images)', 
+      'document(img)', 
+      "doc(img)"
     ]
   },
   {
-    "category": "Science: Computers",
-    "type": "multiple",
+    "category": "Programming",
+    "type": "image",
     "difficulty": "medium",
-    "question": "In which access should a constructor be defined, so that object of the class can be created in any function? ",
-    "correct_answer": "Public",
+    "question": `What will be the output of the following JavaScript code?
+      <img width="550" src='../assets/round/Prog_Q2.jpg'>`,
+    "correct_answer": "13.4",
     "incorrect_answers": [
-      "Any access specifier will work ",
-      "Private",
-      "Protected"
+      "13",
+      "13.3714",
+      "13.3"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "Agile Software Development is based on ",
-    "correct_answer": "Both Incremental Development & Iterative Development ",
+    "question": "Which keyword must be used to get a more granular insight into the memory usage?",
+    "correct_answer": "verbose",
     "incorrect_answers": [
-      "Linear Development",
-      "Incremental Development ",
-      "Iterative Development "
+      "verb",
+      "granule",
+      "gran"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": '"Kanban" means?',
-    "correct_answer": "Todo List ",
+    "question": "What is the purpose of the event onAirEvent?",
+    "correct_answer": "Content is played",
     "incorrect_answers": [
-      "Signboard",
-      "Trello board ",
-      "Progress Overview "
+      "Content is transferred",
+      "Both Content is played and transferred",
+      "Content is changed"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "'.INI' extension refers usually to what kind of file? ",
-    "correct_answer": "System file ",
+    "question": "What is the purpose of the mimeTypes property of a plug-in entry?",
+    "correct_answer": "Contains MIME types",
     "incorrect_answers": [
-      "Image file ",
-      "Hypertext related file ",
-      "Image Color Matching Profile file ",
+      "Contains MIME properties",
+      "Contains MIME sizes",
+      "Contains MIME methods"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "What does SSL stand for? ",
-    "correct_answer": "Secure Socket Layer ",
+    "question": "The different variant of Date() constructor to create date object is/are ____ <br> i. new Date(date), <br> ii. new Date(milliseconds), <br> iii. new Date(date string), <br> iv. new Date(year, month, date[hour, minute, second, millisecond])",
+    "correct_answer": "ii, iii and iv only",
     "incorrect_answers": [
-      "System Socket Layer", 
-      "Super Socket Layer",       
-      "Secure System Layer", 
+      "i, ii and iii only",
+      "i, ii and iv only",
+      "i, ii, iii and iv"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "The first web server was built in: ",
-    "correct_answer": "1990 in Geneva, Switzerland ",
+    "question": "Which of the following symbol is used to declare the preprocessor directives in C++?",
+    "correct_answer": "#",
     "incorrect_answers": [
-      "1985 in Berkeley, California", 
-      "1988 in Cambridge, Massachusetts", 
-      "1947 in Birmingham, UK", 
+      "$", 
+      "^",
+      "*"
     ]
   },
   {
-    "category": "Science: Computers",
-    "type": "multiple",
+    "category": "Programming",
+    "type": "image",
     "difficulty": "medium",
-    "question": "Which of the following word processors came first? ",
-    "correct_answer": "Word Star",
+    "question": `What will be the output of the following C++ program?
+      <img width="350" src='../assets/round/Prog_Q3.jpg'>`,
+    "correct_answer": "Error",
     "incorrect_answers": [
-      "Word Perfect ",
-      "Lotus Notes",
-      "MS Word" 
+      "Segmentation fault",
+      "Value of a: 5",
+      "Value of a: 10"
     ]
   },
   {
-    "category": "Science: Computers",
-    "type": "multiple",
+    "category": "Programming",
+    "type": "image",
     "difficulty": "medium",
-    "question": "When an S/MIME signed message has a disclaimer added by the server and is received by a Notes user, which of the following is the result? ",
-    "correct_answer": "The signature cannot be verified ",
+    "question": `What will be the output of the following C++ code snippet?
+      <img width="350" src='../assets/round/Prog_Q4.jpg'>`,
+    "correct_answer": "10   2.5",
     "incorrect_answers": [
-      "The signature is stripped from the message",
-      "The message cannot be read by the recipient",
-      "The message cannot be transmitted and is returned to the user", 
+      "10.0   5",
+      "10.0   5.0",
+      "5.0  2.5"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "Which database maintains a record of each use of a certifier to register a user or server and also keeps track of certification changes? ",
-    "correct_answer": "Certlog.nsf ",
+    "question": "How structures and classes in C++ differ?",
+    "correct_answer": "In Structures, members are public by default whereas, in Classes, they are private by default",
     "incorrect_answers": [
-      "Log.nsf",
-      "Names.nsf",
-      "Admin4.nsf", 
+      "Structures by default hide every member whereas classes do not", 
+      "Structures cannot have private members whereas classes can have",
+      "In Structures, members are private by default whereas, in Classes, they are public by default" 
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "In order to register servers and users, the administrator must have access to:  ",
-    "correct_answer": "Server id file (server.id)",
+    "question": "When a copy constructor is called?",
+    "correct_answer": "All of the mentioned",
     "incorrect_answers": [
-      "Administrators ID file.",
-      "Certifier ID file",
-      "Organization ID file", 
+      "When an object of the class is returned by value",
+      "When an object of the class is passed by value to a function",
+      "When an object is constructed based on another object of the same class"
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "The first Domino server setup process will create a few ID files, choose the ID file which is optional in this process: ",
-    "correct_answer": "Organizational unit certifier ID (oucert.id)",
+    "question": "Pick out the correct statement for error handling alternatives.",
+    "correct_answer": "Use the stack",
     "incorrect_answers": [
-      "Server ID (server.id) ",
-      "Organization certifier ID (cert.id)", 
-      "Domino Administrator ID (user.id)", 
+      "Terminate the program",
+      "Exit from the block",
+      "Use the queue" 
     ]
   },
   {
-    "category": "Science: Computers",
+    "category": "Programming",
     "type": "multiple",
     "difficulty": "medium",
-    "question": "Cross certification is a two-way process and must happen at symmetric level. ",
-    "correct_answer": "False",
+    "question": "Which of the following is the correct syntax of declaring a complex number? ",
+    "correct_answer": "complex<type> variable_name; ",
     "incorrect_answers": [
-      "True", 
+      "complex variable_name<type>;",
+      "Complex<type> variable_name;", 
+      "Complex variable_name<type>;"
+    ]
+  },
+  {
+    "category": "Programming",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which alternative can replace the throw statement?",
+    "correct_answer": "return",
+    "incorrect_answers": [
+      "for",
+      "break",
+      "exit" 
+    ]
+  },
+  {
+    "category": "Programming",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What are the disadvantages if use return keyword to return error codes? ",
+    "correct_answer": "All of the mentioned",
+    "incorrect_answers": [
+      "You have to handle all exceptional cases explicitly ",
+      "Your code size increases dramatically", 
+      "The code becomes more difficult to read"
     ]
   },
 ];
-
-const sportQues = [
+// Bollywood
+const round3Ques = [
+  {...nextRound('NEXT round: <br> <br> Read question properly before buzz.... ;) <br> <br> Ready?')},
   {
-  "category":"GK : Sports",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"What cricketing term denotes a batsman being dismissed with a score of zero?",
-  "correct_answer":"Duck",
-  "incorrect_answers":[
-      "Bye",
-      "Beamer",
-      "Carry"
-    ]
+    "category":"Bollywood",
+    "type":"image",
+    "difficulty":"medium",
+    "question": `Identify this famous actor - <img width="550" src='../assets/round/pahchan-ak.png'>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  },{
+    "category":"Bollywood",
+    "type":"image",
+    "difficulty":"medium",
+    "question": `Identify this famous actor - <img width="550" src='../assets/round/pahchan-jimmy.png'>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  },{
+    "category":"Bollywood",
+    "type":"image",
+    "difficulty":"medium",
+    "question": `Identify this famous actor - <img width="550" src='../assets/round/pahchan-fardeenK.png'>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  },{
+    "category":"Bollywood",
+    "type":"image",
+    "difficulty":"medium",
+    "question": `Identify this superhit movie - <img width="550" src='../assets/round/identify-movie-paheli.png'>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  },{
+    "category":"Bollywood",
+    "type":"image",
+    "difficulty":"medium",
+    "question": `Identify this famous actor - <img width="550" src='../assets/round/pahchan-aish.png'>`,
+    "correct_answer": null,
+    "incorrect_answers": []
   },
+  {...nextRound('NEXT round: <br> <br> Identify the movie from famous dialogue! <br> <br> Ready?')},
   {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"Which period is referred as the Classical Age or Golden Age of Ancient India?",
-  "correct_answer":"Gupta Period",
-  "incorrect_answers":[
-      "Maurya Period",
-      "Satwahan Period",
-      "Sakya Period",
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Identify the movie from famous dialogue - <br>
+    "Pata hai, yahan se bahut door, galat aur sahi ke paar, ek maidan hai, main vahaan milunga tujhe"`,
+    "correct_answer": "Rockstar",
+    "incorrect_answers": [
+      "Zindagi Na Milegi Dobara",
+      "Yeh Jawaani Hai Deewani",
+      "Its not from any movie",
     ]
-  },
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Identify the movie from famous dialogue - <br>
+    "Keh diya na. Bas, keh diya"`,
+    "correct_answer": "Kabhi Khushi Kabhi Gham",
+    "incorrect_answers": [
+      "Bhagban",
+      "Kuch Kuch Hota Hai",
+      "Its not from any movie",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Identify the movie from famous dialogue - <br>
+    "Itna susu laate kaha se ho tum? Hamare pas to nahi hai. Ye taalab tumne bhara hai?"`,
+    "correct_answer": "Bhool Bhulaiya",
+    "incorrect_answers": [
+      "Bhool Bhulaiya 2",
+      "Hera Pheri",
+      "Phir Hera Pheri",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Identify the movie from famous dialogue - <br>
+    "Rahuuuul… Take a chill pill"`,
+    "correct_answer": "Kabhi Khushi Kabhi Gham",
+    "incorrect_answers": [
+      "Kal Ho Naa Ho",
+      "Kuch Kuch Hota Hai",
+      "Dil Toh Pagal Hai",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Identify the movie from famous dialogue - <br>
+    "Yeh zindagi bohot lambi hai aur hamare paas waqt bahut kam"`,
+    "correct_answer": "Hum Tum",
+    "incorrect_answers": [
+      "Pushpa",
+      "Kal Ho Naa Ho",
+      "Dil Toh Pagal Hai",
+    ]
+  }, // complete lyrics
+  {...nextRound('NEXT round: <br> <br> Complete the song lyrics.... <br> <br> Ready?')},
   {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"When Alexander the great invaded India, the dynasty which was ruling over entire north India was :",
-  "correct_answer":"Nanda Dynasty",
-  "incorrect_answers":[
-      "Gupta Dynasty",
-      "Maurya Dynasty",
-      "Sakya Dynasty",
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Jis ko chaahey paagal kar de apne husn ke jaadu se..."
+    <img width="550" src='../assets/round/song-jis-ko.png'>`,
+    "correct_answer": "Iske lambe lambe, kaale kaale, naagin se baal ray kee, ankhiyon se goli maare",
+    "incorrect_answers": [
+      "Iske kaale kaale, lambe lambe, naagin se baal ray kee, ankhiyon se goli maare",
     ]
-  },
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Chupke se, chori se, milne woh aaya..."
+    <img width="550" src='../assets/round/song-chupke-se.png'>`,
+    "correct_answer": "Na na jo kee maine, toh gussa dikhaaya",
+    "incorrect_answers": [
+      "Na na jo kee maine, toh nakhra dikhaaya",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Channa ve ghar aa jaa ve, dhola ve ghar aa jaa ve..."
+    <img width="550" src='../assets/round/song-channa-ve.png'>`,
+    "correct_answer": "Teriya udika vich muk challe saal, aaja takdi de rog muka jaa ve",
+    "incorrect_answers": [
+      "Teriya udika vich muk challe saah, aaja ishq de rog muka jaa ve",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Shaam sawere teri yaadein aati hain..."
+    <img width="550" src='../assets/round/song-shaam-sawere.png'>`,
+    "correct_answer": "Aa ke dil ko mere yun tadpati hain",
+    "incorrect_answers": [
+      "Ye dil ko mere yun hi tarsati hain",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Ye tikhi tikhi nazrein, tu ru ru, tu ru ru..."
+    <img width="550" src='../assets/round/song-turu-ru.png'>`,
+    "correct_answer": "Yeh hirni jaisi chaal",
+    "incorrect_answers": [
+      "Yeh gorey gorey gaal",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Aaja na chhoole meri chunari sanam, kuchh na main boloon tujhe meri kasam..."
+    <img width="550" src='../assets/round/song-aaja-na.png'>`,
+    "correct_answer": "Aayi jawaani sar pe mere, tere pe kya karun jawaani pe rehem",
+    "incorrect_answers": [
+      "Aayi jawaani sar pe mere, kaise mein na karoon uspe rehem",
+    ]
+  },{
+    "category":"Bollywood",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question": `Complete the song lyrics by matching them with the right option. - <br>
+    "Ab mujhe raat din, tumhara hi khayaal hai..."
+    <img width="550" src='../assets/round/song-ab-mujhe.png'>`,
+    "correct_answer": "Kya kahun pyaar mein, deewano jaisa haal hai",
+    "incorrect_answers": [
+      "Kya karun yaar mein, deewano jaisa haal hai",
+    ]
+  }, // Audio round lyrics
+  {...nextRound('NEXT round: <br> <br> Guess movie from the AUDIO .... <br> <br> Ready? It will auto play...')},
   {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"Khajuraho temples were built by: ",
-  "correct_answer":"The Chandelas",
-  "incorrect_answers":[
-      "The Panchalas",
-      "The Haryanks",
-      "Nandas"
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"Among the four Vedas, which one is a collection of spells and charms?",
-  "correct_answer":"The Atharvaveda",
-  "incorrect_answers":[
-      "The Sama Veda",
-      "The Rig Veda",
-      "The Yajur Veda",
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"Which among the following served as Monsoon Capital of Bombay Presidency during the British Era? ",
-  "correct_answer":"Pune",
-  "incorrect_answers":[
-      "Nagpur",
-      "Khandala",
-      "Solapur", 
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"One horse power is equal to",
-  "correct_answer":"746",
-  "incorrect_answers":[
-      "748 watts",
-      "756 watts",
-      "736 watts",
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"The tree which sends down roots from its branches to the soil is known as:",
-  "correct_answer":"Banyan",
-  "incorrect_answers":[
-      "Oak",
-      "Pine",
-      "Palm",
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"Electric bulb filament is made of",
-  "correct_answer":"Tungsten",
-  "incorrect_answers":[
-      "Copper",
-      "Aluminum",
-      "Lead",
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"Sodium metal is kept under:",
-  "correct_answer":"Kerosene",
-  "incorrect_answers":[
-      "Petrol",
-      "Alcohol",
-      "Water",
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"The ratio of width of our National flag to its length is ",
-  "correct_answer":"2:3",
-  "incorrect_answers":[
-      "3:5",
-      "2:4",
-      "3:4",
-    ]
-  },
-  {
-  "category":"GK",
-  "type":"multiple",
-  "difficulty":"medium",
-  "question":"What is the number of 'Rajya Sabha' seats from Maharashtra?",
-  "correct_answer":"19",
-  "incorrect_answers":[
-      "17", "18", "20",
-    ]
-  },
+    "category":"Bollywood",
+    "type":"audio",
+    "difficulty":"medium", // Hum aapke hai kon
+    "question": `Listen the audio and Guess the movie? - <br /> <br />
+      <audio controls>
+        <source src="../assets/11/Hindi3.mp3" type="audio/mpeg">
+      </audio>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  },{
+    "category":"Bollywood",
+    "type":"audio",
+    "difficulty":"medium",// Munna bhai MBBS
+    "question": `Listen the audio and Guess the movie? - <br /> <br />
+      <audio controls>
+        <source src="../assets/11/Hindi5.mp3" type="audio/mpeg">
+      </audio>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  },{
+    "category":"Bollywood",
+    "type":"audio",
+    "difficulty":"medium",// Qayamat se Qayamat Tak
+    "question": `Listen the audio and Guess the movie? - <br /> <br />
+      <audio controls>
+        <source src="../assets/11/Hindi4.mp3" type="audio/mpeg">
+      </audio>`,
+    "correct_answer": null,
+    "incorrect_answers": []
+  }
 ];
-
-
-const oddManOutQues = [
+// GK
+const round2Ques = [
   {
-  "category":"GK: ODD MAN OUT",
+  "category":"GK",
   "type":"multiple",
   "difficulty":"medium",
-  "question":"Find the odd number/letters from the given alternatives.",
-  "correct_answer":"Driving",
+  "question":"Which company is set to offer multipurpose drones for strategic operations of the Indian Army?",
+  "correct_answer":"Garuda Aerospace",
   "incorrect_answers":[
-      "Swimming",
-      "Sailing",
-      "Diving", 
+      "Pixel Aerospace",
+      "Bharat Dynamics Ltd",
+      "Bharat Electronics Ltd", 
     ]
   },
   {
-  "category":"GK: ODD MAN OUT",
+  "category":"GK",
   "type":"multiple",
   "difficulty":"medium",
-  "question":"Find the odd number / letters / word from the given alternative. ",
-  "correct_answer":"Chicken",
+  "question":"Which organisation manufacturers Tejas Mark-2 Fighter Jets?",
+  "correct_answer":"HAL",
   "incorrect_answers":[
-      "Snake",
-      "Swan",
-      "Crocodile",
-      "Frog",
+      "DRDO",
+      "BEL",
+      "BDL",
     ]
   },
   {
-  "category":"GK: ODD MAN OUT",
+  "category":"GK",
   "type":"multiple",
   "difficulty":"medium",
-  "question":"Find the odd number / letters / word from the given alternative. ",
-  "correct_answer":"Seminar",
+  "question":"Indian Army, along with which institution flight-tested Quick Reaction Surface to Air Missile (QRSAM) system?",
+  "correct_answer":"DRDO",
   "incorrect_answers":[
-      "Semicolon",
-      "Semifinal",    
-      "Semicircle",    
-      "Semitone",
+      "ISRO",
+      "BDL",    
+      "HAL",
     ]
-  },
-  {
-  "category":"GK: ODD MAN OUT",
+  },{
+  "category":"GK",
   "type":"multiple",
   "difficulty":"medium",
-  "question":"Find the odd number / letters / word from the given alternative. ",
-  "correct_answer":"Sarnath",
+  "question":"Which country tested the Minuteman III intercontinental ballistic missile?",
+  "correct_answer":"USA",
   "incorrect_answers":[
-      "Plassey",
-      "Haldighati",
-      "Panipat",
-      "Kurukshetra", 
+      "Japan",
+      "Israel",
+      "France",
     ]
-  },
-  {
-  "category":"GK: ODD MAN OUT",
+  },{
+  "category":"GK",
   "type":"multiple",
   "difficulty":"medium",
-  "question":"Find the odd number / letters / word from the given alternative. ",
-  "correct_answer":"Telescope",
+  "question":"Kibithu military garrison, which was named after General Bipin Rawat, is located in which state/UT?",
+  "correct_answer":"Arunachal Pradesh",
   "incorrect_answers":[
-      "Transistor",
-      "Taperecorder",
-      "Telephone",
+      "Uttarakhand",
+      "Ladakh",
+      "Punjab",
     ]
-  },
-  {
-  "category":"GK: ODD MAN OUT",
+  },{
+  "category":"GK",
   "type":"multiple",
   "difficulty":"easy",
-  "question": "Find the odd number / letters / word from the given alternative",
-    "correct_answer": "Minister",
+  "question": "Which Indian Armed Force conducted the 'Parvat Prahar' Exercise?",
+    "correct_answer": "Indian Army",
     "incorrect_answers": [
-      "King",
-      "Queen",
-      "Bishop",
-      "Knight", 
+      "Indian Air Force",
+      "Indian Navy",
+      "Indo-Tibetan Border Police",
+    ]
+  },{
+  "category":"GK",
+  "type":"multiple",
+  "difficulty":"medium",
+  "question":"Indian Army recently installed India's first Avalanche Monitoring Radar in which state/UT?",
+  "correct_answer":"Sikkim",
+  "incorrect_answers":[
+      "Ladakh",
+      "Arunachal Pradesh",
+      "Jammu and Kashmir",
+    ]
+  },{
+    "category":"GK",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question":"Zojila pass, which was seen in the news recently, is located in which state/ UT?",
+    "correct_answer":"Ladakh",
+    "incorrect_answers":[
+        "Sikkim",
+        "Arunachal Pradesh",
+        "West Bengal",
+      ]
+    },{
+    "category":"GK",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question":"Which Indian armed force has registered 'Intellectual Property Rights (IPR)' of its new camouflage pattern uniform?",
+    "correct_answer":"Indian Army",
+    "incorrect_answers":[
+        "Indian Coast Guard",
+        "Indian Navy",
+        "Indian Air Force",
+      ]
+    },{
+    "category":"GK",
+    "type":"multiple",
+    "difficulty":"medium",
+    "question":"'Samudra Shakti-23' is a bilateral exercise conducted between India and which country?",
+    "correct_answer":"Indonesia",
+    "incorrect_answers":[
+        "France",
+        "Sri Lanka",
+        "Israel",
+      ]
+    }, {
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":" Which launcher is used for Chandrayaan-3?",
+      "correct_answer":"GSLV-Mk3",
+      "incorrect_answers":[
+        "GSLV",
+        "LVSM",
+        "PSLV",
+      ]
+    }, {
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"What was the launch date for Chandrayaan 3 mission?",
+      "correct_answer":"14 July 2023",
+      "incorrect_answers":[
+        "13 July 2023",
+        "24 July 2023",
+        "15 July 2023",
+      ]
+    }, {
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"The Chandrayaan 3 mission's rover is known as - ",
+      "correct_answer":"Pragyaan",
+      "incorrect_answers":[
+        "Dhruv",
+        "Bheem",
+        "Vikram",
+      ]
+    }, {
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"The mission life of the Lander and Rover equal to - ",
+      "correct_answer":"14 Earth Days",
+      "incorrect_answers":[
+        "24 Earth Days",
+        "16 Earth Days",
+        "12 Earth Days",
+      ]
+    }, {
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"What is that one thing in Chandrayaan 3 and not in Chandrayaan 2?",
+      "correct_answer":"(r). Laser Doppler Velocimeter (LDV)",
+      "incorrect_answers":[
+        "(p). Laser-based Interferometry",
+        "(q). Ultrasonic Doppler methods",
+        "All p, q, r",
+      ]
+    }, {
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"Which of the following is missing in Chandrayaan 3?",
+      "correct_answer":"Orbiter",
+      "incorrect_answers":[
+        "Rover",
+        "Lander",
+      ]
+    },{
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"The mission objectives of Chandrayaan-3?",
+      "correct_answer":"All p, q, r",
+      "incorrect_answers":[
+        "(p). To demonstrate Rover roving on the moon",
+        "(q). To demonstrate a Safe and Soft Landing on Lunar Surface",
+        "(r). To conduct in-situ scientific experiments",
+      ]
+    },{
+      "category":"GK",
+      "type":"multiple",
+      "difficulty":"medium",
+      "question":"How much did the Chandrayaan-3 mission cost?",
+      "correct_answer":"$74 Million",
+      "incorrect_answers":[
+        "$65 Million",
+        "$72 Million",
+        "$58 Million",
+      ]
+    },
+];
+// Rapid fire
+const round4Ques = [{
+  ...nextRound(`
+  <style>.round { font-family: arial, sans-serif; border-collapse: collapse; width: 100%; } table.round td, table.round th { border: 1px solid #dddddd; text-align: left; padding: 8px; } .bonus { background-color: green; } .penelty { background-color: red; }</style>
+  <br><i>Bonus Round - Rapid fire</i><br>(5 Ques for each team)<br>
+  <br><table class='round'>
+  <tr> <th>Answers</th> <th>(+ or -) Points</th> <th>Note</th></tr>
+  <tr class='bonus'> <td>5 Ans</td> <td>+50 Points</td> <td>Bonus</td> </tr>
+  <tr> <td>4 Ans</td> <td>+10 Points</td> <td></td> </tr>
+  <tr> <td>3 Ans</td> <td>&nbsp;&nbsp;&nbsp; 0 Point </td> <td>&nbsp;&nbsp;&nbsp; - </td> </tr>
+  <tr> <td>2 Ans</td> <td>-10 Points</td> <td></td> </tr>
+  <tr class='penelty'> <td>1 or 0 Ans</td> <td>-30 Points</td> <td> Loss </td> </tr>
+  </table><br> Ready!?! <br>`)
+  }, {...nextRound('Get Ready: <br> <br> Team 1')},
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "If a grasshopper is eaten by a frog, then the energy transfer will be from ?",
+    "correct_answer": "primary consumer to secondary consumer",
+    "incorrect_answers": [
+      "secondary consumer to primary consumer ",
+      "producer to primary consumer ",
+      "producer to decomposer "
     ]
   },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which group of organisms are not constituents of a food chain ?",
+    "correct_answer": "Wolf, grass, snake, tiger ",
+    "incorrect_answers": [
+      "Frog, snake, eagle, grass, grasshopper",
+      "Plankton, man, fish, grasshopper ",
+      "Grass, lion, rabbit "
+    ]
+  }, 
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "An ecosystem includes ?",
+    "correct_answer": "both living organisms and non-living objects ",
+    "incorrect_answers": [
+      "non-living objects ",
+      "all living organisms ",
+      "sometimes living organisms and sometimes non-living objects "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Food web is ?",
+    "correct_answer": "Interlinked food chains ",
+    "incorrect_answers": [
+      "Display of different food items ",
+      "Using food items for a fashion dress",
+      "Food served through websites "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": " Trophic level in an ecosystem represents ?",
+    "correct_answer": "energy levels",
+    "incorrect_answers": [
+      "salt level ",
+      "water level ",
+      "oxygen level "
+    ]
+  },  {...nextRound('Get Ready: <br> <br> Team 2')},
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the following is biodegradable ?",
+    "correct_answer": "Leather belts ",
+    "incorrect_answers": [
+      'Iron nails ', 
+      'Silver foil ', 
+      'Plastic mugs '
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Excessive exposure to ultraviolet radiation causes ?",
+    "correct_answer": "cancer of skin ",
+    "incorrect_answers": [
+      "jaundice",
+      "damage to the lungs ",
+      "inflammation of liver "
+    ]
+  },  
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Acid rain is caused by the oxides of ?",
+    "correct_answer": "sulphur and nitrogen ",
+    "incorrect_answers": [
+      "sulphur only ",
+      "nitrogen only ",
+      "carbon "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "First link in any food chain is usually green plants because ?",
+    "correct_answer": "hey alone have the capacity to synthesise food using sunlight ",
+    "incorrect_answers": [
+      "there are more herbivores than carnivores ",
+      "they are fixed at one place in the soil ",
+      "they are widely distributed "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which one of the following will undergo fastest bio-degradation ?",
+    "correct_answer": "Mango pulp ",
+    "incorrect_answers": [
+      "Mango peel ",
+      "Wood",
+      "Mango seed"
+    ]
+  },  {...nextRound('Get Ready: <br> <br> Team 3')},
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "The depletion of the ozone layer causes ?",
+    "correct_answer": "increased UV radiations",
+    "incorrect_answers": [
+      "acid rain ", 
+      "earthquakes",       
+      "global warming"
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Accumulation of non- biodegradable pesticides in different trophic levels is called ?",
+    "correct_answer": "Biological magnification ",
+    "incorrect_answers": [
+      "Biological deposition ",
+      "Biological concentration ",
+      "Biological degradation "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which one of the following pairs belong to the category of primary consumers?",
+    "correct_answer": "Grasshoppers & cattle",
+    "incorrect_answers": [
+      "Water beetles & fish ",
+      "Snake and frog ",
+      "Eagle and snake "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "In an ecosystem, herbivores represent ?",
+    "correct_answer": "primary consumers ",
+    "incorrect_answers": [
+      "decomposers",
+      "secondary consumers ",
+      "producers"
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the following is a logical sequence of food chain ?",
+    "correct_answer": "producer -> consumer -> decomposer ",
+    "incorrect_answers": [
+      "decomposer -> producer -> consumer ",
+      "consumer -> producer -> decomposer ",
+      "producer -> decomposer -> consumer "
+    ]
+  },  {...nextRound('Get Ready: <br> <br> Team 4')},
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the following chemicals causes depletion of the ozone layer ?",
+    "correct_answer": "Chloro fluoro carbon ",
+    "incorrect_answers": [
+      "Carbon monoxide  ",
+      "Methane", 
+      "Carbon tetrachloride "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the two in the following sets belong to the same trophic level ?",
+    "correct_answer": "Frog ; Lizard ",
+    "incorrect_answers": [
+      "Hawk ; Rat ",
+      "Goat; Spider ",
+      "Grass; Grasshopper "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "	In the garden ecosystem, which of the following are producers ?",
+    "correct_answer": "Grasses",
+    "incorrect_answers": [
+      "Rabbits",
+      "Snakes",
+      "Insects"
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "What will happen if all the deer are killed in the given food chain Grass -> Deer -> Lion ?",
+    "correct_answer": "The population of lions decreases and grass increases.  ",
+    "incorrect_answers": [
+      "The population of lions remains unchanged. ",
+      "The population of lions increases. ",
+      "The population of grass decreases. "
+    ]
+  },
+  {
+    "category": "RapidFire",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "A food chain comprising birds, green plants, fish and man. The concentration of harmful chemical entering the food chain will be maximum in ?",
+    "correct_answer": "man",
+    "incorrect_answers": [
+      "fish ",
+      "birds", 
+      "green plants  "
+    ]
+  }
 ];
 
 export {
-  demoQues,
-  compQuests,
-  sportQues,
-  oddManOutQues,
+  demoQues,   // demo round
+  round1Ques, // round 1
+  round2Ques, // round 2
+  round3Ques, // round 3
+  round4Ques, // round 4
 }

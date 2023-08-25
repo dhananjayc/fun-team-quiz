@@ -36,9 +36,10 @@ function Settings() {
     handleLoadingChange(true)
     const dcTypes = [
       {id: 1, name: 'Demo (Round Demo)'},
-      {id: 3, name: 'Computer Science (Round 1)'},
-      {id: 2, name: 'General Knowledge (Round 2)'},
-      {id: 4, name: 'Odd Man Out (Round 3)'},
+      {id: 2, name: 'Computer Science (Round 1)'},
+      {id: 3, name: 'GK (Round 2)'},
+      {id: 4, name: 'Bollywood (Round 3)'},
+      {id: 5, name: 'Rapid fire (Bonus Round)'},
     ];
 
     handleLoadingChange(false);
